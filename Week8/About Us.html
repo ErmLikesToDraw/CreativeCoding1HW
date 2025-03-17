@@ -1,0 +1,61 @@
+<html>
+    <title>Forms</title>
+    <head>
+        <script>
+            function getData()
+            {
+            
+                var name = document.getElementById("txtName").value;
+                var phone = document.getElementById("txtEmail").value;
+                actualAnswer ="text"
+
+                var field = document.getElementById("txtName");
+                
+                if (field.value == "") {
+                    document.getElementById("txtName").style.border = "solid 4px red";
+                    alert("One of the fields is empty.");
+                    return false;
+                }
+                
+                var field = document.getElementById("txtEmail");
+                
+                if (field.value == "") {
+                    document.getElementById("txtEmail").style.border = "solid 4px red";
+                    alert("One of the fields is empty.");
+                    return false;
+                }
+
+                document.getElementById("finalResult".innerHTML) = "name: " + name + "phone " + phone;
+                document.getElementById("myCheck").required = true;
+            }
+           
+        
+
+            
+
+        </script>
+    </head>
+    <body>
+        <h1>Please Fill Out The Form</h1>
+        <form action="/action_page.php" method="post">
+            Terms of Agreement: <input type="checkbox" id="myCheck" name="test">
+        <input type="sumbit">
+        
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="txtName" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="txtEmail" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btnSubmit" onClick="getData();">Submit</button></td>
+            </tr>
+        </table>
+        </form>
+        <div id="finalResult"></div>
+        
+    </body>
+</html>
