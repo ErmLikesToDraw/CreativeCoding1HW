@@ -1,0 +1,10 @@
+span.blueColor{
+    color:blue;
+    font-family:arial;
+
+}
+#specificColor{
+    color:red;
+    font-family:verdana;
+    font-size:24px;
+}
